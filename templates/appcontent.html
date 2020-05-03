@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <title>Diary</title>
+{% endblock%}
+
+{% block body%}
+<div class="navbar-fixed waves-effect">
+    <nav>
+      <div class="nav-wrapper white">
+        <a href="/" class="brand-logo center black-text">Diary</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a class="waves-effect waves-light btn black white-text" href="/logout.html">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!--Input text-->
+        <div class="row center">
+              <div class="card col s4 offset-s4">
+                <div class="card-content">
+                    <img src="https://img.freepik.com/free-vector/people-holding-creative-ideas-icons_53876-59890.jpg?size=626&ext=jpg" style="width:60%;height:60%;">
+                    <form action="/appcontent.html" method="post">
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <input id="last_name" type="text" class= "required" name="title">
+                              <label for="last_name">Title</label>
+                            </div>
+                            </div>
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <textarea id="textarea1" class="materialize-textarea" name="message"></textarea>
+                              <label for="textarea1">Message</label>
+                            </div>
+                          </div>
+                        <button class="btn-floating btn-large waves-effect waves-light black" type="submit" name="submit" value="add">
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+          </div>
+    <div class="row">
+    <div class="col s6 offset-s3">
+            <ul class="collection with-header">
+                <li class="collection-header center"><h4>Your Diary</h4></li>
+              </ul>
+              <ul class="collapsible" data-collapsible="accordion">
+               {% for l in t %}
+               <li>
+                <div class="collapsible-header">
+                  <i class="material-icons">subtitles</i>{{l.title}}
+                </div>
+                <div class="collapsible-body">
+                  <span>{{l.message}}</span>
+                </div>
+              </li>                            
+                {% endfor %}
+              </ul>
+    </div>
+  </div>
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+{% endblock%}
+
+

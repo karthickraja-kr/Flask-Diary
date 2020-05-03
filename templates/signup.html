@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <title>welcome</title>
+{% endblock%}
+
+{% block body%}
+<!-- Nav Bar--> 
+<div class="navbar-fixed waves-effect">
+    <nav>
+      <div class="nav-wrapper white">
+        <a href="/" class="brand-logo center black-text">Diary</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/" class="black-text">Home</a></li>
+          <li><a class="waves-effect waves-light btn black white-text" href="/login.html">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+<!-- Notice-->
+{% if message %}
+<div class="row">
+  <div class="col s4 offset-s4">
+    <div class="card">
+      <div class="card-content center">
+        <img src="https://image.freepik.com/free-vector/alert-concept-illustration_114360-388.jpg"style="width:50%;height:20%;">
+        <p>{{message}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+  <!-- Details-->
+
+  
+  <div class="row">
+    <div class="col s6 offset-s3 ">
+      <div class="card">
+        <div class="card-content center">
+            <img src="https://www.pngitem.com/pimgs/m/209-2091411_mobileup-engagement-apps-mobile-app-development-vector-hd.png"style="width:35%;height:35%;">
+            <h3>Sign Up</h3>
+            <div class="row">
+              <form class="col s10 offset-s1" method = "POST">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" type="email" name= "email" class="validate">
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="password" type="password" name = "pass" class="validate">
+                    <label for="password">Password</label>
+                  </div>
+                </div>
+                <button class="btn waves-effect waves-light black" type="submit" name="submit">
+                  Sign Up
+              </button>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock%}

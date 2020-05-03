@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <title>welcome</title>
+{% endblock%}
+
+{% block body%}
+<!-- Nav Bar--> 
+<div class="navbar-fixed waves-effect">
+    <nav>
+      <div class="nav-wrapper white">
+        <a href="/" class="brand-logo center black-text">Diary</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/" class="black-text">Home</a></li>
+          <li><a class="waves-effect waves-light btn white black-text" href="/login.html">Login</a></li>
+          <li><a class="waves-effect waves-light btn black white-text" href="/signup.html">Sign up for free</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- Details-->
+
+  
+  <div class="row center">
+    <div class="col s12 m12">
+      <div class="card">
+        <div class="card-content center">
+            <img src="https://cdn.dribbble.com/users/627511/screenshots/4909987/web-developer.png"style="width:45%;height:45%;">
+          <span class="card-title">Todo List</span>
+          <p>It's my Pet project using flask , materialize css and Firebase to develop my skills</p>
+        </div>
+      </div>
+    </div>
+    <a class="waves-effect waves-light btn black white-text" href="http://karthick-kr.000webhostapp.com/" target="new">Developer Info</a>
+  </div>
+           
+
+
+{% endblock%}

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <title>welcome</title>
+{% endblock%}
+
+{% block body%}
+<!-- Nav Bar--> 
+  <div class="navbar-fixed waves-effect">
+    <nav>
+      <div class="nav-wrapper white">
+        <a href="/about.html" class="brand-logo center black-text">Diary</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/about.html" class="black-text">About</a></li>
+          <li><a class="waves-effect waves-light btn white black-text"href="/login.html">Login</a></li>
+          <li><a class="waves-effect waves-light btn black"href="/signup.html">Sign up for free</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- Details-->
+
+  
+  <div class="row center">
+    <div class="col s12 m12">
+      <div class="card">
+        <div class="card-content center">
+            <img src="https://d2hkcehpyog59.cloudfront.net/67f5a3ccc3ca0c03328cf5ace0ffef7331caa4a1/moving-hero.png" style="width:70%;height:70%;">
+          <span class="card-title">Diary</span>
+          <p>Capture Your amazing Movements and journey in this Secure Online Diary to access anywhere in the world</p>
+        </div>
+      </div>
+    </div>
+    <a class="waves-effect waves-light btn black" href="/signup.html">Sign up for free</a>
+  </div>
+           
+
+
+{% endblock%}
